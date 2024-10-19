@@ -13,7 +13,8 @@
 
 <body>
   <header>
-
+    <svg class="genericons-neue genericons-neue-hierarchy" width="16px" height="16px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="genericons-neue.svg#hierarchy"></use></svg>
+    <h2>Rase</h2>
   </header>
 
   <main>
