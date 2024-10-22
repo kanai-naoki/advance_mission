@@ -69,6 +69,9 @@ Rase
 php artisan key:generate
 - 6.マイグレーション実行  
 php artisan migrate
+- 7.シーディング実行  
+php artisan db:seed
+
 
 
 
