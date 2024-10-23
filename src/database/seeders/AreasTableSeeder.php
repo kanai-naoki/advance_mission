@@ -17,17 +17,17 @@ class AreasTableSeeder extends Seeder
         $param = [
             'area' => '東京都'
         ];
-        DB::table('genres')->insert($param);
+        DB::table('areas')->insert($param);
 
         $param = [
-            'genre' => '大阪府'
+            'area' => '大阪府'
         ];
-        DB::table('genres')->insert($param);
+        DB::table('areas')->insert($param);
 
         $param = [
-            'genre' => '福岡県'
+            'area' => '福岡県'
         ];
-        DB::table('genres')->insert($param);
+        DB::table('areas')->insert($param);
 
     }
 }

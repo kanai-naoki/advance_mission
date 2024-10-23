@@ -16,4 +16,14 @@ class Book extends Model
         'book_time', 
         'number'
     ];
+
+    public function user_relation()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function shop_relation()
+    {
+        return $this->belongsTo(Shop::class);
+    }
 }

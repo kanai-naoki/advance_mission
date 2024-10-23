@@ -13,4 +13,14 @@ class Favorite extends Model
         'user_id',
         'shop_id'
     ];
+
+    public function user_relation()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function shop_relation()
+    {
+        return $this->belongsTo(Shop::class);
+    }
 }

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\FavoriteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,7 @@ use App\Http\Controllers\ShopController;
 Route::middleware('auth')->group(function () {
     Route::get('/', [ShopController::class, 'index']);
     Route::get('/detail', [ShopController::class, 'description']);
-    // Route::get('/my_page', [ShopController::class, '']);
-
+    Route::get('/my_page', [ShopController::class, 'book_list']);
+    // Route::get('/done', [BookController::class, '']);
+    // Route::get('/update_done', [BookController::class, '']);
 });

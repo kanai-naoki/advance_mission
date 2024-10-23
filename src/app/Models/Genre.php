@@ -12,4 +12,9 @@ class Genre extends Model
     protected $fillable = [
         'genre'
     ];
+
+    public function shop_relation()
+    {
+        return $this->hasone(Shop::class);
+    }
 }
