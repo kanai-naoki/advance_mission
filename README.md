@@ -71,6 +71,8 @@ php artisan key:generate
 php artisan migrate
 - 7.シーディング実行  
 php artisan db:seed
+### メール送信環境設定
+- 1.
 
 
 
