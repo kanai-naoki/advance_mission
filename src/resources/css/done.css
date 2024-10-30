@@ -1,6 +1,11 @@
+.done_content_area {
+    margin: auto 0;
+    align-items: center;
+}
+
 .done_content {
     width: 33%;
-    height: 150px;
+    height: 250px;
     background-color: white;
     border-radius: 3px;
     border-style: solid 1px;
@@ -16,7 +21,7 @@
 .done_button {
     background-color: rgb(12, 82, 235);
     color: white;
-    font-size: 14px;
+    font-size: 15px;
     border-radius: 5px;
     border-style: solid 1px rgb(119, 115, 115);
 }

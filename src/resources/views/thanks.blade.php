@@ -5,13 +5,15 @@
 @endsection
 
 @section('content')
-<div class="thanks_content">
-    <div class="thanks_txt">
-        <h3>会員登録ありがとうございます。</h3>
-        <form action="/login" method="get">
-        @csrf
-            <button class="thnaks_button">ログインする</button>
-        </form>
+<div class="thanks_content_area">
+    <div class="thanks_content">
+        <div class="thanks_txt">
+            <h3>会員登録ありがとうございます。</h3>
+            <form action="/login" method="get">
+            @csrf
+                <button class="thnaks_button">ログインする</button>
+            </form>
+        </div>
     </div>
 </div>
 @endsection

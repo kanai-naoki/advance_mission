@@ -1,3 +1,8 @@
+.thnaks_content_area {
+    margin: auto 0;
+    align-items: center;
+}
+
 .thnaks_content {
     width: 33%;
     height: 150px;
@@ -5,18 +10,18 @@
     border-radius: 3px;
     border-style: solid 1px;
     box-shadow: 3px 3px 1px rgb(51, 48, 48);
-    align-items: center;
 }
 
 .thnaks_txt {
     font-size: 18px;
     font-weight: bold;
+    text-align: center;
 }
 
 .thnaks_button {
     background-color: rgb(12, 82, 235);
     color: white;
-    font-size: 14px;
+    font-size: 15px;
     border-radius: 5px;
     border-style: solid 1px rgb(119, 115, 115);
 }
