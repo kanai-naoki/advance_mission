@@ -1,0 +1,39 @@
+.html {
+    height: 100%;
+    width: 100%;
+}
+
+.body {
+    background-color: rgba(173, 164, 164, 0.212);
+    height: 100%;
+    width: 100%; 
+}
+
+.header {
+    height: 10%;
+    width: 100%;
+}
+
+.header_content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_icon {
+
+}
+
+.header_ttl {
+    width: 36%;
+    margin: 0% 7%;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(12, 82, 235);
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+}

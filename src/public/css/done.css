@@ -1,0 +1,31 @@
+.done_content_area {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.done_content {
+    margin-top: 10%;
+    width: 25%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 3px;
+    border-style: solid 1px;
+    box-shadow: 2px 2px 1px rgb(189, 186, 186);
+}
+
+.done_txt {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.done_button {
+    background-color: rgb(12, 82, 235);
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+}

@@ -1,0 +1,49 @@
+.shop_list_wrapper {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shop_list_card {
+    width: 22.5%;
+    height: 30%;
+    margin: 2% 1%;
+}
+
+.shop_list_content-img {
+    height: 50%;
+}
+
+.img {
+    width: 100%;
+}
+
+.shop_list_text-box {
+    height: 50%;
+    padding: 2%;
+}
+
+.shop_name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.shop_area, 
+.shop_genre {    
+    font-size: 15px;
+    margin: 1% 0;
+}
+
+.shop_list_button {
+    justify-content: space-between;
+}
+
+.shop_detail_button {
+    background-color: rgb(12, 82, 235);
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    border-style: solid 1px rgb(119, 115, 115);
+}
+
+

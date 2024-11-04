@@ -1,0 +1,101 @@
+.my_page_header_content {
+    margin: 0 auto;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.my_page_content {
+    display: flex;
+    justify-content: center;
+}
+
+.book_status {
+    width: 47.5%;
+}
+
+.book_content {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.book_table {
+    height: 30%;
+    padding: 2%;
+    background-color: rgb(12, 82, 235);
+    color: white;
+    font-size: 15px;
+    border-radius: 3px;
+    border-style: solid 1px;
+    box-shadow: 3px 3px 1px rgb(51, 48, 48);
+}
+
+.table {
+    width: 100%;
+    height: 100%;
+}
+
+.book_table_header{
+    width: 30%;
+    height: 20%;
+}
+
+.book_table_content {
+    width: 70%;
+    height: 20%;
+}
+
+.favorite_status {
+    width: 47.5%;
+}
+
+.favorite_content {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.favorite_wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.favorite_list_card {
+    width: 22.5%;
+    height: 30%;
+}
+
+.favorite_list_content-img {
+    height: 50%;
+}
+
+.img {
+    width: 100%;
+}
+
+.shop_list_text-box {
+    height: 50%;
+    padding: 2%;
+}
+
+.shop_name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.shop_area,
+.shop_genre {
+    font-size: 15px;
+    margin: 1% 0;
+}
+
+.shop_list_button {
+    justify-content: space-between;
+}
+
+.shop_detail_button {
+    background-color: rgb(12, 82, 235);
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    border-style: solid 1px rgb(119, 115, 115);
+}

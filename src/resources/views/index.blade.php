@@ -9,12 +9,12 @@
     @foreach ($shop_lists as $shop_list)
     <div class="shop_list_card">
         <div class="shop_list_content-img">
-        <img src="{{ $shop_list->shop_imgage }}" />
+        <img class="img" src="{{ $shop_list->shop_imgage }}" />
     </div>
         <div class="shop_list_text-box">
-            <h2>{{ $shop_list->shop_name }}</h2>
-            <p>{{ $shop_list->area }}</p>
-            <p>{{ $shop_list->genre }}</p>
+            <h2 class="shop_name">{{ $shop_list->shop_name }}</h2>
+            <p class="shop_area">{{ $shop_list->area }}</p>
+            <p class="shop_genre">{{ $shop_list->genre }}</p>
             <div class="shop_list_button">
                 <form action="/detail" method="get">
                 @csrf

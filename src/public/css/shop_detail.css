@@ -1,0 +1,82 @@
+.shop_detail_content {
+    display: flex;
+}
+
+.shop_detail_area {
+    width: 42%;
+    margin: 4%;
+}
+
+.shop_detail_header {
+    height: 10%;
+    margin: 1% 0;
+}
+
+.shop_detail_button {
+    background-color: white;
+    border-radius: 3px;
+    border-style: solid 1px;
+    box-shadow: 3px 3px 1px rgb(51, 48, 48);
+}
+
+.shop_detail_username {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.shop_detail_img {
+    height: 70%;
+    margin: 1% 0;
+}
+
+.img {
+    width: 100%;
+}
+
+.shop_detail_tag, 
+.shop_detail_description {
+    font-size: 17px;
+    margin: 1% 0;
+}
+
+.book_area {
+    width: 42%;
+    margin: 4%;
+    background-color: rgb(12, 82, 235);
+    border-radius: 3px;
+    border-style: solid 1px;
+    box-shadow: 3px 3px 1px rgb(51, 48, 48);
+}
+
+.book_header {
+    text-align: left;
+}
+
+.book_header_content {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.book_form {    
+    text-align: left;
+}
+
+.book_form_date,
+.book_form_time ,
+.book_form_number {
+    font-size: 17px;
+    color: white;
+}
+
+.book_confirm {
+    font-size: 17px;
+    background-color: rgb(138, 198, 247);
+} 
+
+.book_button {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(1, 5, 243);
+}

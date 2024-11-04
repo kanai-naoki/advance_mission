@@ -5,37 +5,39 @@
 @endsection
 
 @section('content')
-<div class="login_content area">
+<div class="login_content_area">
     <div class="login_form">
         <table class="table">
-            <thead class="login_form_header">
-                <tr class="login_form_header_table">
-                    <th class="login_form_header_txt">Login</th>
-                </tr>
-            </thead>
-            <tbody class="login_form_item">
-                <tr class="login_form_item_table">
-                    <th class="login_form_item_header">
-                        {{-- email アイコン --}}
-                        <p>Email</p>
-                    </th>
-                    <td class="login_fonm_email"></td>
-                </tr>
-                <tr class="login_form_item_table">
-                    <th class="login_form_item_header">
-                        {{-- password アイコン --}}
-                        <p>Password</p>
-                    </th>
-                    <td class="login_fonm_password"></td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="login_form_submit">
             <form action="/login" method="post">
             @csrf
-                <button class="login_form_submit" type="submit">ログイン</button>
-            </form>
-        </div>
+                <thead class="login_form_header">
+                    <tr class="login_form_header_table">
+                        <th class="login_form_header_txt">Login</th>
+                    </tr>
+                </thead>
+                <tbody class="login_form_item">
+                    <tr class="login_form_item_table">
+                        <td class="login_form_item_header">
+                            {{-- email アイコン --}}
+                            <label for="email">Email</label>
+                            <input class="login_form_email" type="email" name="email" id="email">
+                        </td>
+                    </tr>
+                    <tr class="login_form_item_table">
+                        <td class="login_form_item_header">
+                            {{-- password アイコン --}}
+                            <label for="password">Password</label>
+                            <input class="login_form_password" type="password" name="password" id="password">
+                        </td>
+                    </tr>
+                    <tr class="login_form_item_table">
+                        <td class="login_form_submit">
+                            <button class="login_form_button" type="submit">ログイン</button>
+                        </td>
+                    </tr>
+                </form>
+            </tbody>
+        </table>
     </div>
 </div>
 @endsection
