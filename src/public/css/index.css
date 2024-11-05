@@ -1,26 +1,40 @@
 .shop_list_wrapper {
-    justify-content: center;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
 }
 
 .shop_list_card {
-    width: 22.5%;
-    height: 30%;
-    margin: 2% 1%;
+    width: 20%;
+    height: 35%;
+    margin: 1% 1%;
+    background-color: white;
+    border-radius: 3%;
+    box-shadow: 3px 3px 1px rgb(189, 186, 186);
 }
 
 .shop_list_content-img {
+    width: 100%;
     height: 50%;
 }
 
 .img {
     width: 100%;
+    height: 100%;
 }
 
 .shop_list_text-box {
+    display: flex;
+    flex-direction: column;
     height: 50%;
-    padding: 2%;
+    padding: 2.5% 5%;
+}
+
+.shop_name_area {
+    height: 30%;
+    align-items: center;
 }
 
 .shop_name {
@@ -28,22 +42,28 @@
     font-weight: bold;
 }
 
+.shop_tag_area {
+    display: flex;
+    height: 30%;
+}
+
 .shop_area, 
 .shop_genre {    
     font-size: 15px;
-    margin: 1% 0;
 }
 
-.shop_list_button {
+.shop_detail_area {
+    display: flex;
     justify-content: space-between;
+    height: 30%;
 }
 
 .shop_detail_button {
-    background-color: rgb(12, 82, 235);
+    margin-top: 10%;
+    background-color: rgb(12, 82, 235);;
     color: white;
     font-size: 15px;
     border-radius: 5px;
-    border-style: solid 1px rgb(119, 115, 115);
 }
 
 

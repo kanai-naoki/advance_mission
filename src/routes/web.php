@@ -17,11 +17,11 @@ use App\Http\Controllers\FavoriteController;
 */
 
 Route::get('/thank', [RegisterController::class, 'register_thanks']);
-
+Route::get('/', [ShopController::class, 'shop_all']);
+Route::get('/detail', [ShopController::class, 'description']);
+   
 Route::middleware('auth')->group(function () {
-    Route::get('/', [ShopController::class, 'index']);
-    Route::get('/detail', [ShopController::class, 'description']);
-    Route::get('/my_page', [ShopController::class, 'book_list']);
+     Route::get('/my_page', [ShopController::class, 'book_list']);
     // Route::get('/done', [BookController::class, '']);
     // Route::get('/update_done', [BookController::class, '']);
 });

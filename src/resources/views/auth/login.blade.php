@@ -8,7 +8,7 @@
 <div class="login_content_area">
     <div class="login_form">
         <table class="table">
-            <form action="/login" method="post">
+            <form action="{{ route('login') }}" method="post">
             @csrf
                 <thead class="login_form_header">
                     <tr class="login_form_header_table">
@@ -20,7 +20,7 @@
                         <td class="login_form_item_header">
                             {{-- email アイコン --}}
                             <label for="email">Email</label>
-                            <input class="login_form_email" type="email" name="email" id="email">
+                            <input class="login_form_email" type="email" name="email" id="email" value="{{ old('email') }}" >>
                         </td>
                     </tr>
                     <tr class="login_form_item_table">

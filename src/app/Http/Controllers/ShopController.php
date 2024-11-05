@@ -3,14 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+use App\Models\User;
+use App\Models\Shop;
+use App\Models\Area;
+use App\Models\Genre;
 
 class ShopController extends Controller
 {
     // ホーム画面(全店舗表示)
     public function shop_all()
     {
-        // 全店舗の情報をShopモデルから取得する。
-        return view('index');
+        $shop_lists = Shop::select('shops.id', 'shop_name', 'shop_detail', 'shop_image')
+            ->join('areas', 'shops.area_id', '=', 'areas.id')
+            ->join('genres', 'shops.genre_id', '=', 'genres.id')
+            ->get();
+        // dd($shop_lists);
+        return view('index', compact('shop_lists'));
     }
 
     // 場所検索機能

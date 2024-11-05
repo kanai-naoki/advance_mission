@@ -14,20 +14,20 @@
                 </tr>
             </thead>
             <tbody class="register_form_item">
-                <form action="/register" method="post">
+                <form action="{{ route('register') }}" method="post">
                 @csrf
                     <tr class="register_form_item_table">
                         <td class="register_form_item_header">
                            {{-- username アイコン --}}
                             <label for="name">Username</label>
-                            <input class="register_form_name" type="text" name="name" id="name">
+                            <input class="register_form_name" type="text" name="name" id="name" value="{{ old('name') }}">
                         </td>
                     </tr>
                     <tr class="register_form_item_table">
                         <td class="register_form_item_header">
                             {{-- email アイコン --}}
                             <label for="email">Email</label>
-                            <input class="register_form_email" type="email" name="email" id="email">
+                            <input class="register_form_email" type="email" name="email" id="email" value="{{ old('email') }}">
                         </td>
                     </tr>
                     <tr class="register_form_item_table">
@@ -40,8 +40,8 @@
                     <tr class="register_form_item_table">
                         <td class="register_form_item_header">
                             {{-- 確認 アイコン --}}
-                            <label for="password">Confirm</label>
-                            <input class="register_form_confirm" type="password" name="password" id="password">
+                            <label for="confirm_password">Confirm</label>
+                            <input class="register_form_confirm" type="password" name="confirm_password" id="confirm_password">
                         </td>
                     </tr>
                     <tr class="register_form_item_table">
