@@ -38,6 +38,13 @@
                         </td>
                     </tr>
                     <tr class="register_form_item_table">
+                        <td class="register_form_item_header">
+                            {{-- 確認 アイコン --}}
+                            <label for="password">Confirm</label>
+                            <input class="register_form_confirm" type="password" name="password" id="password">
+                        </td>
+                    </tr>
+                    <tr class="register_form_item_table">
                         <td class="register_form_submit">
                             <button class="register_form_button" type="submit">登録</button>
                         </td>

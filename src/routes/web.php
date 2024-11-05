@@ -16,6 +16,8 @@ use App\Http\Controllers\FavoriteController;
 |
 */
 
+Route::get('/thank', [RegisterController::class, 'register_thanks']);
+
 Route::middleware('auth')->group(function () {
     Route::get('/', [ShopController::class, 'index']);
     Route::get('/detail', [ShopController::class, 'description']);

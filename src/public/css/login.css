@@ -8,12 +8,12 @@
     margin-top: 10%;
     width: 25%;
     height: 30%;
+    box-shadow: 3px 3px 1px rgb(189, 186, 186);
 }
 
 .table {
     width: 100%;
     height: 100%;
-    box-shadow: 2px 2px 1px rgb(189, 186, 186);
     text-align: left;
 }
 
