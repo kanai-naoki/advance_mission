@@ -1,3 +1,57 @@
+.search_content {
+    width: 50%;
+    height: 100%;
+}
+
+.search_content_box {
+    width:  84%;
+    height: 41%;
+    margin: 3.5% 2%;
+    background-color: white;
+    border-radius: 3%;
+    box-shadow: 3px 3px 1px rgb(189, 186, 186);    
+}
+
+.search_table {
+    width: 100%;
+    height: 100%;
+}
+
+.search_area,
+.search_genre {
+    width: 20%;
+    height: 100%;
+    border-right: solid 1px rgb(233, 229, 229);
+}
+
+.search_area_form,
+.search_genre_form,
+.search_word_form {
+    width: 100%;
+    height: 100%;    
+}
+
+.search_area_select_box,
+.search_area_genre_box {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: bolder;
+    border: none;
+}
+
+.search_word {
+    width: 60%;
+    height: 100%;
+}
+
+.search_word_box {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: 0;
+}
+
 .shop_list_wrapper {
     display: flex;
     justify-content: center;
@@ -49,7 +103,8 @@
 
 .shop_area, 
 .shop_genre {    
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .shop_detail_area {

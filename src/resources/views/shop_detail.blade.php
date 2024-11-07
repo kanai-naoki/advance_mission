@@ -9,16 +9,16 @@
     <div class="shop_detail_area">
         <div class="shop_detail_header">
             <button class="shop_detail_button"><</button>
-            <h2 class="shop_detail_username">{{ $shop_list->name }}</h2>
+            <h2 class="shop_detail_username">{{ $shop_status->shop_name }}</h2>
         </div>
         <div class="shop_detail_img">
-            <img class="img" src="{{ $shop_list->shop_image }}">
+            <img class="img" src="{{ $shop_status->shop_image }}">
         </div>
         <div class="shop_detail_tag">
-            <span>#</span><p>{{ $shop_list->area }}<span>#</span>{{ $shop_list->genre }}</p>
+            <span>#</span><p>{{ $shop_status->area }}<span>#</span>{{ $shop_status->genre }}</p>
         </div>
         <div class="shop_detail_description">
-            <p>{{ $shop_list->detail }}</p>
+            <p>{{ $shop_status->shop_detail }}</p>
         </div>
     </div>
     <div class="book_area">

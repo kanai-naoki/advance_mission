@@ -16,7 +16,9 @@
         <div class="header_content">
             {{-- アイコンを入れる --}}
             <h2 class="header_ttl">Rese</h2>
+            @yield('search')
         </div>
+        
     </header>
 
     <main class="main">

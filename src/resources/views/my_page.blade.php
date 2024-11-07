@@ -53,16 +53,21 @@
                 <div class="favorite_list_content-img">
                 <img class="img" src="{{ $favorite_list->shop_image }}" />
             </div>
-            <div class="shop_list_text-box">
-                <h2 class="shop_name">{{ $favorite_list->shop_name }}</h2>
-                <p class="shop_area">{{ $favorite_list->area }}</p>
-                <p class="shop_genre">{{ $favorite_list->genre }}</p>
-            <div class="shop_list_button">
-                <form action="/detail" method="get">
-                @csrf
-                    <button class="shop_detail_button">詳しく見る</button>
-                    {{-- お気に入りアイコン --}}
-                </form>
+            <div class="favorite_list_text-box">
+                <div class="shop_name_area">
+                    <h2 class="shop_name">{{ $shop_list->shop_name }}</h2>
+                </div>
+                <div class="shop_tag_area">
+                    <p class="shop_area">#{{ $shop_list->area }}</p>
+                    <p class="shop_genre">#{{ $shop_list->genre }}</p>
+                </div>
+                <div class="favorite_detail_area">
+                    <form action="/detail" method="get">
+                    @csrf
+                        <button class="shop_detail_button">詳しく見る</button>
+                        {{-- お気に入りアイコン --}}
+                    </form>
+                </div>
             </div>
         @endforeach 
         </div>

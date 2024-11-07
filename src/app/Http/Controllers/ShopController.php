@@ -15,9 +15,10 @@ class ShopController extends Controller
     // ホーム画面(全店舗表示)
     public function shop_all()
     {
-        $shop_lists = Shop::select('shops.id', 'shop_name', 'shop_detail', 'shop_image')
+        $shop_lists = Shop::select('shops.id', 'areas.area', 'genres.genre', 'shop_name', 'shop_image')
             ->join('areas', 'shops.area_id', '=', 'areas.id')
             ->join('genres', 'shops.genre_id', '=', 'genres.id')
+            // ->where('area_id', $request->area_id)or
             ->get();
         // dd($shop_lists);
         return view('index', compact('shop_lists'));
@@ -45,9 +46,14 @@ class ShopController extends Controller
     }
 
     // 店舗詳細表示
-    public function description()
+    public function description(Request $request)
     {
-        
-        return view('shop_detail');
+        $shop_status = Shop::select('shops.id', 'areas.area', 'genres.genre', 'shop_name', 'shop_detail', 'shop_image')
+            ->join('areas', 'shops.area_id', '=', 'areas.id')
+            ->join('genres', 'shops.genre_id', '=', 'genres.id')
+            ->where('shops.id', $request->id)
+            ->first();
+        // dd($shop_status);
+        return view('shop_detail', compact('shop_status'));
     }
 }
