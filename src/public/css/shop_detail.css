@@ -10,45 +10,66 @@
 .shop_detail_header {
     height: 10%;
     margin: 1% 0;
+    display: flex;
+}
+
+.shop_detail_form {
+    margin: 3% 0%; 
 }
 
 .shop_detail_button {
+    
     background-color: white;
-    border-radius: 3px;
-    border-style: solid 1px;
-    box-shadow: 3px 3px 1px rgb(51, 48, 48);
+    border-radius: 5%;
+    box-shadow: 3px 3px 1px rgb(189, 186, 186);
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.shop_detail_username {
+.shop_detail_name {
+    height: 50%;
     font-size: 20px;
     font-weight: bold;
 }
 
 .shop_detail_img {
-    height: 70%;
-    margin: 1% 0;
+    height: 66%;
+    margin: 1% 0%;
 }
 
 .img {
     width: 100%;
 }
 
-.shop_detail_tag, 
+.shop_detail_tag {
+    height: 8%;
+    margin: 1% 0%;
+    display: flex;
+    font-size: 15px;
+    font-weight: bold;
+}
+
 .shop_detail_description {
-    font-size: 17px;
-    margin: 1% 0;
+    height: 8%;
+    margin: 1% 0%;
+    font-size: 15px;
+    font-weight: bold;    
 }
 
 .book_area {
     width: 42%;
     margin: 4%;
+    padding: 1% 2%;
     background-color: rgb(12, 82, 235);
     border-radius: 3px;
     border-style: solid 1px;
-    box-shadow: 3px 3px 1px rgb(51, 48, 48);
+    box-shadow: 3px 3px 1px rgb(189, 186, 186);
 }
 
 .book_header {
+    height: 4%;
+    margin: 1% 0;
     text-align: left;
 }
 
@@ -58,25 +79,61 @@
     font-weight: bold;
 }
 
-.book_form {    
+.book_form_area {
+    width: 100%;
+    height: 92%;
+}
+
+.book_form {
+    height: 60%;    
+    display: flex;
+    flex-direction: column;
     text-align: left;
 }
 
-.book_form_date,
+.book_form_date {
+    width: 50%;
+    margin: 1% 0%;
+    border-radius: 3px;
+    font-size: 15px;
+    color: white;
+}
+
 .book_form_time ,
 .book_form_number {
-    font-size: 17px;
+    width: 100%;
+    margin: 1% 0%;
+    border-radius: 3px;
+    font-size: 15px;
     color: white;
 }
 
 .book_confirm {
-    font-size: 17px;
-    background-color: rgb(138, 198, 247);
+    height: 60%;
+    margin: 2% 0%;
+    font-size: 15px;
+    color: white;
+    border-radius: 3px;
+    background-color: rgb(75, 131, 252);
 } 
+
+.book_confirm_row {
+    width: 100%;
+}
+
+.book_confirm_header {
+    padding: 1% 2%;
+    width: 20%;
+}
+
+.book_confirm_txt {
+    padding: 1% 2%;
+    width: 80%;
+}
 
 .book_button {
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
     color: white;
     background-color: rgb(1, 5, 243);
 }

@@ -8,14 +8,18 @@
 <div class="shop_detail_content">
     <div class="shop_detail_area">
         <div class="shop_detail_header">
-            <button class="shop_detail_button"><</button>
-            <h2 class="shop_detail_username">{{ $shop_status->shop_name }}</h2>
+            <form class="shop_detail_form" action="/" method="get">
+            @csrf
+                <button class="shop_detail_button" type="submit"><</button>
+            </form>                
+            <h2 class="shop_detail_name">&nbsp{{ $shop_status->shop_name }}</h2>
         </div>
         <div class="shop_detail_img">
             <img class="img" src="{{ $shop_status->shop_image }}">
         </div>
         <div class="shop_detail_tag">
-            <span>#</span><p>{{ $shop_status->area }}<span>#</span>{{ $shop_status->genre }}</p>
+            <p>#{{ $shop_status->area }}</p>
+            <p>#{{ $shop_status->genre }}</p>    
         </div>
         <div class="shop_detail_description">
             <p>{{ $shop_status->shop_detail }}</p>
@@ -33,21 +37,21 @@
                     <input class="book_form_time" type="time" value="">
                     <input class="book_form_number" type="">
                     <table class="book_confirm">
-                        <tr>
-                            <th>Shop</th>
-                            <td></td>
+                        <tr class="book_confirm_row">
+                            <th class="book_confirm_header">Shop</th>
+                            <td class="book_confirm_txt"></td>
                         </tr>
-                        <tr>
-                            <th>Date</th>
-                            <td></td>
+                        <tr class="book_confirm_row">
+                            <th class="book_confirm_header">Date</th>
+                            <td class="book_confirm_txt"></td>
                         </tr>
-                        <tr>
-                            <th>Time</th>
-                            <td></td>
+                        <tr class="book_confirm_row">
+                            <th class="book_confirm_header">Time</th>
+                            <td class="book_confirm_txt"></td>
                         </tr>
-                        <tr>
-                            <th>Number</th>
-                            <td></td>
+                        <tr class="book_confirm_row">
+                            <th class="book_confirm_header">Number</th>
+                            <td class="book_confirm_txt"></td>
                         </tr>
                     </table>
                 </div>
