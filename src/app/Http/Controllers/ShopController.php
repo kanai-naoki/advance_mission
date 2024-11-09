@@ -18,7 +18,6 @@ class ShopController extends Controller
         $shop_lists = Shop::select('shops.id', 'areas.area', 'genres.genre', 'shop_name', 'shop_image')
             ->join('areas', 'shops.area_id', '=', 'areas.id')
             ->join('genres', 'shops.genre_id', '=', 'genres.id')
-            // ->where('area_id', $request->area_id)or
             ->get();
         // dd($shop_lists);
         return view('index', compact('shop_lists'));

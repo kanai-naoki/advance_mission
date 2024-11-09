@@ -9,9 +9,10 @@ class FavoriteController extends Controller
 {
     
     // お気に入り登録機能
-    public function favorite_create()
+    public function favorite_create(Request $request)
     {
-        
+        $favorite = $request->all();
+        Favorite::create($favorite);   
         return redirect('/');
     }
 
@@ -23,9 +24,9 @@ class FavoriteController extends Controller
     }
 
     // お気に入り削除機能
-    public function favorite_delete()
+    public function favorite_remove(Request $request)
     {
-        
+        Favorite::find($request->id)->delete();
         return redirect('/');
     }
 

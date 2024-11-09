@@ -20,7 +20,7 @@
                         <td class="login_form_item_header">
                             {{-- email アイコン --}}
                             <label for="email">Email</label>
-                            <input class="login_form_email" type="email" name="email" id="email" value="{{ old('email') }}" >>
+                            <input class="login_form_email" type="email" name="email" id="email" value="{{ old('email') }}">
                         </td>
                     </tr>
                     <tr class="login_form_item_table">

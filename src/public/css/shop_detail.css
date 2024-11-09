@@ -17,8 +17,7 @@
     margin: 3% 0%; 
 }
 
-.shop_detail_button {
-    
+.shop_detail_button {    
     background-color: white;
     border-radius: 5%;
     box-shadow: 3px 3px 1px rgb(189, 186, 186);
@@ -34,7 +33,7 @@
 }
 
 .shop_detail_img {
-    height: 66%;
+    height: 63%;
     margin: 1% 0%;
 }
 
@@ -96,7 +95,7 @@
     margin: 1% 0%;
     border-radius: 3px;
     font-size: 15px;
-    color: white;
+    background-color: white;
 }
 
 .book_form_time ,
@@ -105,7 +104,7 @@
     margin: 1% 0%;
     border-radius: 3px;
     font-size: 15px;
-    color: white;
+    background-color: white;
 }
 
 .book_confirm {

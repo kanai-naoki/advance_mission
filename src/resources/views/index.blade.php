@@ -23,7 +23,7 @@
                 <td class="search_genre">
                     <form class="search_genre_form" action="/" method="post">
                     @csrf
-                        <select class="search_area_genre_box" value="genre_id">
+                        <select class="search_area_genre_box" name="genre_id">
                             <option selected>All Genre</option>
                             <option value="1">寿司</option>
                             <option value="2">焼肉</option>

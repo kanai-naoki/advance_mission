@@ -22,7 +22,11 @@ Route::post('/', [ShopController::class, 'shop_search']);
 Route::get('/detail', [ShopController::class, 'description']);
    
 Route::middleware('auth')->group(function () {
-     Route::get('/my_page', [ShopController::class, 'book_list']);
-    // Route::get('/done', [BookController::class, '']);
-    // Route::get('/update_done', [BookController::class, '']);
+    Route::post('/book', [BookController::class, 'book_create']);
+    Route::get('/my_page', [ShopController::class, 'book_list']);
+    Route::post('/book_delete', [BookController::class, 'book_delete']);
+    Route::post('/favorite', [FavoriteController::class, 'favorite_create']);
+    Route::post('/favorite_delete', [BookController::class, 'favorite_remove']);
+    // 予約内容編集機能
+    Route::post('/edit', [BookController::class, 'book_update']);
 });

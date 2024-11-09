@@ -33,9 +33,29 @@
             <form action="/book" method="post">
             @csrf
                 <div class="book_form">
-                    <input class="book_form_date" type="date" value="">
-                    <input class="book_form_time" type="time" value="">
-                    <input class="book_form_number" type="">
+                    <input class="book_form_date" type="date" name="book_date" value="2024-01-01" >
+                    <select class="book_form_time" name="book_time">
+                        <option selected value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                        <option value="18:30">18:30</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                        <option value="21:00">21:00</option>
+                        <option value="21:30">21:30</option>
+                        <option value="22:00">22:00</option>
+                        <option value="22:30">22:30</option>
+                    </select>
+                    <select class="book_form_number" name="book_number">
+                        <option selected value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
                     <table class="book_confirm">
                         <tr class="book_confirm_row">
                             <th class="book_confirm_header">Shop</th>
@@ -56,6 +76,7 @@
                     </table>
                 </div>
                 <div class="book_submit">
+                    <input type="hidden" name="shop_id" value="{{ $shop_status->id }}">
                     <button class="book_button" type="submit">予約する</button>
                 </div>
             </form>

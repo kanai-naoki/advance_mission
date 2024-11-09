@@ -21,7 +21,7 @@
                         {{-- 時計アイコンを挿入 --}}
                         <p>予約1</p><span></span>
                     </th>
-                    {{-- <td class="book_delete_button">削除アイコンを挿入</td> --}}
+                    {{-- <td <form class="form" action="{{ route('logout') }}" method="post">@csrf<div class="book_delete_button">削除アイコンを挿入</div></td> --}}
                 </tr> 
                 <tr>
                     <th class="book_table_header">Shop</th>
