@@ -17,17 +17,119 @@
 .header_content {
     height: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.header_icon {
+.hamburger-menu {
+    width: 12%;
+    height: 100%;
+}
 
+.menu-btn {
+    position: fixed;
+    top: 3%;
+    left: 7%;
+    display: flex;
+    height: 35px;
+    width: 35px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: rgb(12, 82, 235);
+    border-radius: 10%;
+    box-shadow: 3px 3px 1px rgb(189, 186, 186);
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 20px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+
+.menu-btn span:before {
+    bottom: 8px;
+}
+
+.menu-btn span:after {
+    top: 8px;
+}
+
+#menu-btn-check:checked~.menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+    /*メニューオープン時は真ん中の線を透明にする*/
+}
+
+#menu-btn-check:checked~.menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#menu-btn-check:checked~.menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+    display: none;
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background-color: #f0f3f5;
+    transition: all 0.5s;
+}
+
+.link_list {
+    list-style: none;
+    width: 100%;
+    height: 33%;
+}
+
+.register_button,
+.login_button,
+.home_button,
+.logout_button,
+.mypage_button {
+    display: block;
+    width: 100%;
+    font-size: 35px;
+    font-weight: bold;
+    box-sizing: border-box;
+    color: rgb(12, 82, 235);
+    background-color: #f0f3f5;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    position: relative;
+    padding: 10% 0%;
+}
+
+#menu-btn-check:checked~.menu-content {
+    left: 0;
+}
+
+.header_ttl_area {
+    width: 38%;
+    height: 100%;
+    margin-top: 1%;
 }
 
 .header_ttl {
-    width: 36%;
-    margin: 0% 7%;
     font-size: 25px;
     font-weight: bold;
     color: rgb(12, 82, 235);

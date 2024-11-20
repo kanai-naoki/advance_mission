@@ -2,6 +2,7 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 @endsection
 
 @section('search')
@@ -35,6 +36,7 @@
                 </td>
                 <td class="search_word">
                     <form class="search_word_form" method="get">
+                        <span class="material-icons">search</span>
                         <input class="search_word_box" type="search" placeholder="Search">
                     </form>
                 </td>    
@@ -60,12 +62,30 @@
                 <p class="shop_genre">#{{ $shop_list->genre }}</p>
             </div>
             <div class="shop_detail_area">
-                <form action="/detail" method="get">
+                <form class="shop_detail_form" action="/detail" method="get">
                 @csrf
                     <input type="hidden" name="id" value="{{ $shop_list->id }}">
                     <button class="shop_detail_button">詳しく見る</button>
-                    {{-- お気に入りアイコン --}}    
-                </form>   
+                </form>
+                {{-- どうやって、画面表示を切り替えるか考える。IFに設定できる式等を調べてくる --}}
+                @empty($favorite)
+                <form class="favorite_form" action="/favorite" method="post" >
+                @csrf    
+                    <input type="hidden" name="user_id" value="{{ Auth::id() }}">
+                    <input type="hidden" name="shop_id" value="{{ $shop_list->id }}">
+                    <button class="favorite_button" type="submit">
+                        <span class="material-icons">favorite</span>
+                    </button>
+                </form>
+                @else
+                <form class="favorite_delete_form" action="/favorite_delete">
+                @csrf
+                @method('DELETE')
+                    <button class="favorite_delete_button" type="submit">
+                        <span class="material-icons">favorite</span>
+                    </button>
+                </form>
+                @endempty   
             </div>
         </div>
     </div>    

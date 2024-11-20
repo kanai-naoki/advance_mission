@@ -9,9 +9,9 @@
     <div class="thanks_content">
         <div class="thanks_txt">
             <h3>会員登録ありがとうございます。</h3>
-            <form action="/login" method="get">
+            <form action="/login" method="post">
             @csrf
-                <button class="thnaks_button">ログインする</button>
+                <button class="thnaks_button" type="submit" >ログインする</button>
             </form>
         </div>
     </div>

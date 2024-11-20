@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\User;
 use App\Models\Shop;
 use App\Models\Area;
 use App\Models\Genre;
+use App\Models\Favorite;
 
 class ShopController extends Controller
 {
@@ -24,26 +26,18 @@ class ShopController extends Controller
     }
 
     // 場所検索機能
-    public function search_area()
+    public function search(Request $request)
     {
-        
-        return view('index');
+        $search_results = Shop::select('shops.id', 'areas.area', 'genres.genre', 'shop_name', 'shop_image')
+            ->join('areas', 'shops.area_id', '=', 'areas.id')
+            ->join('genres', 'shops.genre_id', '=', 'genres.id')
+            ->where()
+            ->get();
+        // dd($search_results);
+        return view('index', compact('search_results'));
     }
 
-    // ジャンル検索機能
-    public function search_genre()
-    {
-        
-        return view('index');
-    }
-
-    // 店名検索機能
-    public function search_shopName()
-    {
-        
-        return view('index');
-    }
-
+    
     // 店舗詳細表示
     public function description(Request $request)
     {

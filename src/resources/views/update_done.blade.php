@@ -9,7 +9,7 @@
     <div class="update_done_content">
         <div class="update_done_txt">
             <h3>変更を受け付けました。</h3>
-            <form action="/detail" method="get">
+            <form class="update_done_form" action="/detail" method="get">
             @csrf
                 <button class="update_done_button">戻る</button>
             </form>

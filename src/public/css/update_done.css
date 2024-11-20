@@ -23,6 +23,10 @@
     font-weight: bold;
 }
 
+.update_done_form {
+    text-align: center;
+}
+
 .update_done_button {
     background-color: rgb(12, 82, 235);
     color: white;

@@ -45,12 +45,25 @@
     padding: 3% 8%;
     font-size: 16px;
     font-weight: bold;
+    
+}
+
+.register_form {
+}
+
+.material-icons {
+    width: 10%;
+}
+
+.register_from_item_label {
+    width: 40%;
 }
 
 .register_fonm_name,
 .register_fonm_email,
 .register_fonm_password,
 .register_fonm_confirm {
+    width: 50%;
     font-size: 16px;
     border: none;
     outline: 0;

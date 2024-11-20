@@ -39,16 +39,25 @@
 
 .login_form_item_header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 3% 8%;
     font-size: 16px;
     font-weight: bold;
 }
 
+.material-icons {
+    width: 10%;
+}
+
+.login_from_item_label {
+    width: 40%;
+}
+
 .login_fonm_name,
 .login_fonm_email,
 .login_fonm_password {
+    width: 50%;
     font-size: 16px;
     border: none;
     outline: 0;

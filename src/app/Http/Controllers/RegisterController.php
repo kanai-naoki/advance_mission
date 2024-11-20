@@ -9,6 +9,12 @@ class RegisterController extends Controller
     // 会員登録完了画面
     public function register_thanks()
     {
-        return view('thanks');
+        return view('auth.thanks');
+    }
+
+    // ログイン画面
+    public function login_page()
+    {
+        return view('auth.login');
     }
 }
