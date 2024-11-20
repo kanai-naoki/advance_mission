@@ -20,14 +20,17 @@
                 <tr class="book_table_ttl_area">
                     <th class="book_table_ttl">
                         <span class="material-icons">schedule</span>&nbsp
-                        <p>予約1</p>
+                        <p>予約{{ $loop->iteration }}</p>
                     </th>
-                    <td 
-                        <form class="form" action="/book_delete" method="post">
+                    <td class="book_delete">
+                        <form class="book_delete_form" action="/book_delete" method="post">
                         @method('DELETE')
                         @csrf
-                            <div class="book_delete_button">削除アイコンを挿入</div>
-                        </form>
+                            <input type="hidden" name="id" value="{{ $book->id }}">
+                            <button class="book_delete_button" type="submit">       
+                                <span class="material-icons">cancel</span>
+                            </button>
+                        </form>        
                     </td> 
                 </tr> 
                 <form action="/edit" method="post">
@@ -118,7 +121,7 @@
                     </form>
                     <form class="favorite_form" action="/favorite_delete" method="post">
                     @csrf
-                    
+                    @method('DELETE')
                         <input type="hidden" name="user_id" value="{{ $favorite->user_id }}">
                         <input type="hidden" name="shop_id" value="{{ $favorite->shop_id }}">
                         <button class="favorite_button" type="submit">       

@@ -27,7 +27,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/book', [BookController::class, 'book_create']);
     Route::get('/done', [BookController::class, 'book_done']);
     Route::get('/my_page', [BookController::class, 'book_list']);
-    Route::delete('/book_delete', [BookController::class, 'book_delete']);
+    Route::delete('/book_delete', [BookController::class, 'book_destroy']);
     Route::post('/favorite', [FavoriteController::class, 'favorite']);
     Route::delete('/favorite_delete', [FavoriteController::class, 'favorite_destory']);
     Route::patch('/edit', [BookController::class, 'book_update']);

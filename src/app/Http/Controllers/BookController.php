@@ -40,7 +40,7 @@ class BookController extends Controller
             ->get();
         // dd($books);
 
-        $favorites = Shop::select('user_id', 'shops.id', 'areas.area', 'genres.genre', 'shop_name', 'shop_image')
+        $favorites = Shop::select('user_id', 'shop_id', 'areas.area', 'genres.genre', 'shop_name', 'shop_image')
             ->join('areas', 'shops.area_id', '=', 'areas.id')
             ->join('genres', 'shops.genre_id', '=', 'genres.id')
             ->join('favorites', 'shops.id', '=', 'favorites.shop_id')
@@ -55,14 +55,16 @@ class BookController extends Controller
     // 予約h編集機能
     public function book_update(Request $request)
     {
+        // dd($request);
         $book_edit = $request->all();
         Book::find($request->id)->update($book_edit);
         return view('update_done');
     }
 
     // 予約h削除機能
-    public function book_delete(Request $request)
+    public function book_destroy(Request $request)
     {
+        // dd($request);
         Book::find($request->id)->delete();
         return redirect('/my_page');
     }

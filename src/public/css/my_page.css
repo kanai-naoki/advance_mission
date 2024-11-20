@@ -64,7 +64,16 @@
 }
 
 .book_delete {
-    width: 50%;
+    padding-right: 3%;
+}
+
+.book_delete_form {
+    text-align: right;
+}
+
+.book_delete_button {
+    border: none;
+    background-color: rgb(12, 82, 235);
 }
 
 .book_table_header{

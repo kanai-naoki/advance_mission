@@ -19,16 +19,9 @@ class FavoriteController extends Controller
     // お気に入り削除機能
     public function favorite_destory(Request $request) 
     {
-        dd($request);
+        // dd($request);
         Favorite::where('user_id', '=', $request->user_id)->where('shop_id', '=', $request->shop_id)->delete();
         return redirect('/my_page');
     }
-    
-    // お気に入り一覧
-    public function favorite_list()
-    {
         
-        return view('my_page', compact('favorites'));
-    }
-    
 }
