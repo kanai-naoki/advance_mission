@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Models\User;
 
 class RegisterRequst extends FormRequest
 {
@@ -24,9 +25,10 @@ class RegisterRequst extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required', 'string',
+            'name' => 'required', 'string|max:191',
             'email' => 'required', 'email', 'unique:users', 'string|max:191',
-            'password' => 'required', 'string|min:8|max:191'
+            'password' => 'required', 'string|min:8|max:191',
+            'password_confirmation' => 'required'
         ];
     }
 
@@ -42,6 +44,7 @@ class RegisterRequst extends FormRequest
             'password.string' => '文字列で入力してください',
             'password.min' => '8文字以上で入力してください',
             'password.max' => '191文字以内で入力してください',
+            'password_confirmation.required' => 'もう一度パスワードを入力してください',
         ];
     }
 }

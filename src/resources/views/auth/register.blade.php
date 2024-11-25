@@ -7,7 +7,7 @@
 
 @section('content')
 <div class="register_content_area">
-    <div class="register_form">
+    <div class="register_form_area">
         <table class="table">
             <thead class="register_form_header">
                 <tr class="register_form_header_table">
@@ -24,13 +24,27 @@
                             <input class="register_form_name" type="text" name="name" id="name" value="{{ old('name') }}">
                         </td>
                     </tr>
+                    @error('name')
+                    <tr class="register_form_item_table">
+                        <td class="register_error_txt">
+                            <p class="error_message" style="color: red">{{ $message }}</p>     
+                        </td>
+                    </tr>
+                    @enderror
                     <tr class="register_form_item_table">
                         <td class="register_form_item_header">
                             <span class="material-icons">mail</span>
                             <label class="register_from_item_label" for="email">Email</label>
-                            <input class="register_form_email" type="email" name="email" id="email" value="{{ old('email') }}">
+                            <input class="register_form_email" type="email" name="email" id="email" value="{{ old('email') }}">     
                         </td>
                     </tr>
+                    @error('email')
+                    <tr class="register_form_item_table">
+                        <td class="register_error_txt">
+                            <p class="error_message" style="color: red">{{ $message }}</p>     
+                        </td>
+                    </tr>
+                    @enderror
                     <tr class="register_form_item_table">
                         <td class="register_form_item_header">
                             <span class="material-icons">lock</span>
@@ -38,6 +52,13 @@
                             <input class="register_form_password" type="password" name="password" id="password">
                         </td>
                     </tr>
+                    @error('password')
+                    <tr class="register_form_item_table">
+                        <td class="register_error_txt">
+                            <p class="error_message" style="color: red">{{ $message }}</p>     
+                        </td>
+                    </tr>
+                    @enderror
                     <tr class="register_form_item_table">
                         <td class="register_form_item_header">
                             <span class="material-icons">check</span>
@@ -45,6 +66,13 @@
                             <input class="register_form_confirm" type="password" name="password_confirmation" id="confirm_password">
                         </td>
                     </tr>
+                   @error('password_confirmation')
+                    <tr class="register_form_item_table">
+                        <td class="register_error_txt">
+                            <p class="error_message" style="color: red">{{ $message }}</p>     
+                        </td>
+                    </tr>
+                    @enderror
                     <tr class="register_form_item_table">
                         <td class="register_form_submit">
                             <input class="register_form_button" type="submit" value="登録"></input>

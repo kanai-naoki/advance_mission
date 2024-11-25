@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-// use App\Http\Requests\BookRequest;
+use App\Http\Requests\BookRequest;
 
 use App\Models\User;
 use App\Models\Shop;
@@ -15,7 +15,7 @@ use App\Models\Book;
 class BookController extends Controller
 {
     // 予約登録機能
-    public function book_create(Request $request)
+    public function book_create(BookRequest $request)
     {
         $book_detail = [
             'user_id' => Auth::id(),
@@ -53,7 +53,7 @@ class BookController extends Controller
     }
 
     // 予約h編集機能
-    public function book_update(Request $request)
+    public function book_update(BookRequest $request)
     {
         // dd($request);
         $book_edit = $request->all();

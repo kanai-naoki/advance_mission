@@ -25,18 +25,17 @@ class BookRequest extends FormRequest
     public function rules()
     {
         return [
-            'book_date' => 'required',
-            'book_time' => 'required',
-            'number' => 'required'
+            'book_date' => 'required|after:yesterday',
+            'book_time' => 'required|after:now+today',
         ];
     }
 
     public function messages()
     {
         return [
-            'book_date.required' => '日付を入力してください',
-            'book_time.required' => '時間を入力してください',
-            'number.required' => '人数を入力してください',
+            'book_date.required' => '※日付を入力してください',
+            'book_date.after' => '※今日以降の日付を入力してください',
+            'book_time.after' => '※時間の入力に誤りがあります',
         ];
     }
 }

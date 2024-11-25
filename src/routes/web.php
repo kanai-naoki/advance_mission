@@ -20,7 +20,7 @@ use App\Http\Controllers\FavoriteController;
 // Route::get('/thank', [RegisterController::class, 'register_thanks']);
 // Route::get('/login', [RegisterController::class, 'login_page']);
 Route::get('/', [ShopController::class, 'shop_all']);
-Route::post('/', [ShopController::class, 'shop_search']);
+Route::post('/', [ShopController::class, 'search']);
 Route::get('/detail', [ShopController::class, 'description']);
    
 Route::middleware('auth')->group(function () {

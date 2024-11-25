@@ -15,7 +15,7 @@ use App\Models\Favorite;
 class ShopController extends Controller
 {
     // ホーム画面(全店舗表示)
-    public function shop_all()
+    public function shop_all(Request $request)
     {
         $shop_lists = Shop::select('shops.id', 'areas.area', 'genres.genre', 'shop_name', 'shop_image')
             ->join('areas', 'shops.area_id', '=', 'areas.id')
@@ -28,13 +28,14 @@ class ShopController extends Controller
     // 場所検索機能
     public function search(Request $request)
     {
-        $search_results = Shop::select('shops.id', 'areas.area', 'genres.genre', 'shop_name', 'shop_image')
+        $shop_lists = Shop::select('shops.id', 'areas.area', 'genres.genre', 'shop_name', 'shop_image')
             ->join('areas', 'shops.area_id', '=', 'areas.id')
             ->join('genres', 'shops.genre_id', '=', 'genres.id')
-            ->where()
+            ->where('shops.area_id', '=', $request->area_id)->orwhere('shops.genre_id', '=', $request->genre_id)->orwhere('shops.shop_name', 'LIKE', "{$request->word}%")
             ->get();
+            // リクエストをリセットする方法を検討する必要あり
         // dd($search_results);
-        return view('index', compact('search_results'));
+        return view('index', compact('shop_lists'));
     }
 
     

@@ -75,6 +75,7 @@ return [
     */
 
     'home' => RouteServiceProvider::HOME,
+    'path' => 'admin',
 
     /*
     |--------------------------------------------------------------------------
@@ -116,7 +117,7 @@ return [
     */
 
     'limiters' => [
-        'login' => 'login',
+        'login' => 10,
         'two-factor' => 'two-factor',
     ],
 
@@ -147,7 +148,7 @@ return [
     'features' => [
         Features::registration(),
         Features::resetPasswords(),
-        // Features::emailVerification(),
+        Features::emailVerification(),
         Features::updateProfileInformation(),
         Features::updatePasswords(),
         Features::twoFactorAuthentication([

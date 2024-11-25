@@ -32,9 +32,13 @@
         <div class="book_form_area">
             <form class="book_form" action="/book" method="post">
             @csrf
-                <input class="book_form_date" type="date" name="book_date" value="2024-01-01" >
+                <input class="book_form_date" type="date" name="book_date" value="null" >
+                @error('book_date')
+                <p style="color: red">{{ $message }}</p>
+                @enderror
                 <select class="book_form_time" name="book_time">
-                    <option selected value="17:00">17:00</option>
+                    <option selected value="null">-</option>
+                    <option value="17:00">17:00</option>
                     <option value="17:30">17:30</option>
                     <option value="18:00">18:00</option>
                     <option value="18:30">18:30</option>
@@ -47,6 +51,9 @@
                     <option value="22:00">22:00</option>
                     <option value="22:30">22:30</option>
                 </select>
+                @error('book_time')
+                <p style="color: red">{{ $message }}</p>
+                @enderror
                 <select class="book_form_number" name="number">
                     <option selected value="1">1</option>
                     <option value="2">2</option>
@@ -55,6 +62,9 @@
                     <option value="5">5</option>
                     <option value="6">6</option>
                 </select>
+                @error('number')
+                <p style="color: red">{{ $message }}</p>
+                @enderror
                 <table class="book_confirm">
                     <tr class="book_confirm_row">
                         <th class="book_confirm_header">Shop</th>

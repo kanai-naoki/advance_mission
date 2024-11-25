@@ -8,13 +8,13 @@
     margin-top: 10%;
     width: 25%;
     height: 30%;
-    box-shadow: 3px 3px 1px rgb(189, 186, 186);
 }
 
 .table {
     width: 100%;
     height: 100%;
     text-align: left;
+    box-shadow: 3px 3px 1px rgb(189, 186, 186);
 }
 
 .login_form_header {
@@ -46,19 +46,29 @@
     font-weight: bold;
 }
 
+.login_error_txt {
+    text-align: center;
+}
+
+.error_message {
+    margin: 0% 0%;
+    padding: 3% 8%;
+    font-size: 16px;
+    height: 100%;
+}
+
 .material-icons {
     width: 10%;
 }
 
 .login_from_item_label {
-    width: 40%;
+    width: 35%;
 }
 
-.login_fonm_name,
-.login_fonm_email,
-.login_fonm_password {
-    width: 50%;
-    font-size: 16px;
+.login_form_email,
+.login_form_password {
+    width: 55%;
+    font-size: 13px;
     border: none;
     outline: 0;
 }

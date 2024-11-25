@@ -3,6 +3,7 @@
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="{{ asset('/js/search.js') }}"></script>
 @endsection
 
 @section('search')
@@ -10,36 +11,31 @@
     <div class="search_content_box">
         <table class="search_table">
             <tr>
-                <td class="search_area">
-                    <form class="search_area_form" action="/" method="post">
+                <form class="search_area_form" action="/" name="search" id="search_form" method="post">
                     @csrf
-                        <select class="search_area_select_box" name="area_id">
-                            <option selected>All Area</option>
-                            <option value="1">東京都</option>
-                            <option value="2">大阪府</option>
-                            <option value="3">福岡</option>
-                        </select>
-                    </form>
+                <td class="search_area">
+                     <select class="search_area_select_box" name="area_id" id="area">
+                        <option selected value="">All Area</option>
+                        <option value="1">東京都</option>
+                        <option value="2">大阪府</option>
+                        <option value="3">福岡</option>
+                    </select>  
                 </td>
                 <td class="search_genre">
-                    <form class="search_genre_form" action="/" method="post">
-                    @csrf
-                        <select class="search_area_genre_box" name="genre_id">
-                            <option selected>All Genre</option>
-                            <option value="1">寿司</option>
-                            <option value="2">焼肉</option>
-                            <option value="3">居酒屋</option>
-                            <option value="4">イタリアン</option>
-                            <option value="5">ラーメン</option>
-                        </select>
-                    </form>
+                    <select class="search_area_genre_box" name="genre_id" id="genre">
+                        <option selected value="">All Genre</option>
+                        <option value="1">寿司</option>
+                        <option value="2">焼肉</option>
+                        <option value="3">居酒屋</option>
+                        <option value="4">イタリアン</option>
+                        <option value="5">ラーメン</option>
+                    </select>
                 </td>
                 <td class="search_word">
-                    <form class="search_word_form" method="get">
-                        <span class="material-icons">search</span>
-                        <input class="search_word_box" type="search" placeholder="Search">
-                    </form>
-                </td>    
+                    <span class="material-icons">search</span>
+                    <input class="search_word_box" type="search" name="search_word" id="search_word" placeholder="Search">
+                </td>
+                </form>    
             </tr>
         </table>
     </div>           

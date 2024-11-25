@@ -21,9 +21,16 @@
                         <td class="login_form_item_header">
                             <span class="material-icons">mail</span>
                             <label class="login_from_item_label" for="email">Email</label>
-                            <input class="login_form_email" type="email" name="email" id="email" value="{{ old('email') }}">
+                            <input class="login_form_email" type="email" name="email" id="email" value="{{ old('email') }}">    
                         </td>
                     </tr>
+                    @error('email')
+                    <tr class="login_form_item_table">
+                        <td class="login_error_txt">
+                            <p class="error_message" style="color: red">{{ $message }}</p>     
+                        </td>
+                    </tr>
+                    @enderror
                     <tr class="login_form_item_table">
                         <td class="login_form_item_header">
                             <span class="material-icons">lock</span>
@@ -31,6 +38,13 @@
                             <input class="login_form_password" type="password" name="password" id="password">
                         </td>
                     </tr>
+                    @error('password')
+                    <tr class="login_form_item_table">
+                        <td class="login_error_txt">
+                            <p class="error_message" style="color: red">{{ $message }}</p>     
+                        </td>
+                    </tr>
+                    @enderror
                     <tr class="login_form_item_table">
                         <td class="login_form_submit">
                             <input class="login_form_button" type="submit" value="ログイン"></input>
