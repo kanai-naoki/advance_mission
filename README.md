@@ -48,12 +48,14 @@ Rese
 - php7.4.9
 
 ## ER図
+![alt text](image.png)
 
 ## 環境構築
 ### Dockerビルド
 - 1.git clone git@github.com:kanai-naoki/advance_mission.git
 - 2.DockerDesktopを立ち上げる
-- 3.docker-compose up -d --build　
+- 3.docker-compose up -d --build
+　
 ### Laravel環境構築
 - 1.docker-compose exec php bash
 - 2.composer install
@@ -71,8 +73,12 @@ php artisan key:generate
 php artisan migrate
 - 7.シーディング実行  
 php artisan db:seed
+
 ### メール送信環境設定
-- 1.
+- 1.mailtrapにアカウント作成
+- 2.メールサーバーの値を転記
+![alt text](mailtrap設定画面.png)
+![alt text](.envファイル設定.png)
 
 
 

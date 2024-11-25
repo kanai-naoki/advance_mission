@@ -46,15 +46,24 @@
                     <th class="book_table_header">Date</th>
                     <td class="book_table_content">
                         <p class="book_detail">{{ $book->book_date }}</p>
-                        <input class="book_update_form" type="date" name="book_date" value="2024-01-01" >
+                        <input class="book_update_form" type="date" name="book_date" value="{{ old('book_date') }}" >
                     </td>
                 </tr>
+                @error('book_date')
+                    <tr>
+                        <th class="book_table_header"></th>
+                        <td class="book_table_content">
+                            <p class="error_message" style="color: red">{{ $message }}</p>     
+                        </td>
+                    </tr>
+                @enderror
                 <tr>
                     <th class="book_table_header">Time</th>
                     <td class="book_table_content">
                         <p class="book_detail">{{ $book->book_time }}</p>
                         <select class="book_update_form" name="book_time">
-                            <option selected value="17:00">17:00</option>
+                            <option selected value="null">-</option>
+                            <option value="17:00">17:00</option>
                             <option value="17:30">17:30</option>
                             <option value="18:00">18:00</option>
                             <option value="18:30">18:30</option>
@@ -69,6 +78,14 @@
                         </select>
                     </td>
                 </tr>
+                @error('book_time')
+                    <tr>
+                        <th class="book_table_header"></th>
+                        <td class="book_table_content">
+                            <p class="error_message" style="color: red">{{ $message }}</p>     
+                        </td>
+                    </tr>
+                @enderror
                 <tr>
                     <th class="book_table_header">Numboer</th>
                     <td class="book_table_content">

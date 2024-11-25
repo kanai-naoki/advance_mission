@@ -32,7 +32,7 @@
         <div class="book_form_area">
             <form class="book_form" action="/book" method="post">
             @csrf
-                <input class="book_form_date" type="date" name="book_date" value="null" >
+                <input class="book_form_date" type="date" name="book_date" value="{{ old('book_date') }}" >
                 @error('book_date')
                 <p style="color: red">{{ $message }}</p>
                 @enderror
@@ -68,7 +68,7 @@
                 <table class="book_confirm">
                     <tr class="book_confirm_row">
                         <th class="book_confirm_header">Shop</th>
-                        <td class="book_confirm_txt"></td>
+                        <td class="book_confirm_txt">{{ $shop_status->shop_name }}</td>
                     </tr>
                     <tr class="book_confirm_row">
                         <th class="book_confirm_header">Date</th>
