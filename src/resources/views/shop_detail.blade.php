@@ -8,11 +8,19 @@
 <div class="shop_detail_content">
     <div class="shop_detail_area">
         <div class="shop_detail_header">
-            <form class="shop_detail_form" action="/" method="get">
-            @csrf
-                <button class="shop_detail_button" type="submit"><</button>
-            </form>                
-            <h2 class="shop_detail_name">&nbsp{{ $shop_status->shop_name }}</h2>
+            <div class="shop_detail_header_left">
+                <form class="shop_detail_form" action="/" method="get">
+                @csrf
+                    <button class="shop_detail_button" type="submit"><</button>
+                </form>                
+                <h2 class="shop_detail_name">&nbsp{{ $shop_status->shop_name }}</h2>
+            </div>
+            <div class="shop_detail_header_right">
+                <form class="shop_reviewform" action="/review" method="get">
+                @csrf
+                    <button class="shop_review_button" type="submit">レビューを書く</button>
+                </form>
+            </div>
         </div>
         <div class="shop_detail_img">
             <img class="img" src="{{ $shop_status->shop_image }}">

@@ -27,13 +27,23 @@ class Shop extends Model
         return $this->hasmany(Favorite::class);
     }
 
-    public function area_relation()
+    public function areas_relation()
     {
         return $this->belongsTo(Area::class);
     }
 
-    public function genre_relation()
+    public function genres_relation()
     {
         return $this->belongsTo(Genre::class);
+    }
+
+    public function reviews_relation()
+    {
+        return $this->hasmany(Review::class);
+    }
+
+    public function orners_relation()
+    {
+        return $this->hasone(Orner::class);
     }
 }

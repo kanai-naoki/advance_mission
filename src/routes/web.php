@@ -1,10 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\RegisterController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
+
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\OrnerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,9 +45,25 @@ Route::post('/email/verification-notification', function (Request $request) {
 Route::middleware('verified')->group(function () {
     Route::post('/book', [BookController::class, 'book_create']);
     Route::get('/done', [BookController::class, 'book_done']);
-    Route::get('/my_page', [BookController::class, 'book_list']);
+    Route::patch('/book_edit', [BookController::class, 'book_update']); 
     Route::delete('/book_delete', [BookController::class, 'book_destroy']);
-    Route::post('/favorite', [FavoriteController::class, 'favorite']);
-    Route::delete('/favorite_delete', [FavoriteController::class, 'favorite_destory']);
-    Route::patch('/edit', [BookController::class, 'book_update']);
+    Route::get('/my_page', [BookController::class, 'book_list']);
+    Route::get('/review', [ReviewController::class, 'review_form']);
+    Route::post('/review', [ReviewController::class, 'review_create']);
+    Route::patch('/review_edit', [ReviewController::class, 'review_update']);
+    Route::delete('/review_delete', [ReviewController::class, 'review_destory']);
+    Route::post('/favorite', [FavoriteController::class, 'favorite_create']);
+    Route::delete('/favorite_delete', [FavoriteController::class, 'favorite_destory']);    
 });
+
+// 管理者権限
+Route::get('/admin', [OrnerController::class, 'admin_home']);
+Route::post('/orner', [OrnerController::class, 'orner_create']);
+Route::patch('/orner_edit', [OrnerController::class, 'orner_update']);
+Route::delete('/orner_delete', [OrnerController::class, 'orner_destory']);
+
+// 店舗代表者権限
+Route::get('/orner', [Shop_representativeController::class, 'orner_home']);
+Route::patch('/orner_shop_detail_edit', [Shop_representativeController::class, 'shop_detail_update']);
+Route::delete('/orner_shop_detail_delete', [Shop_representativeController::class, 'shop_detail_destroy']);
+Route::get('/books', [Shop_representativeController::class, 'book_list']);

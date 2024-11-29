@@ -50,4 +50,19 @@ class ShopController extends Controller
         // dd($shop_status);
         return view('shop_detail', compact('shop_status'));
     }
+
+    // 店舗情報編集機能
+    public function shop_detail_update(Request $request)
+    {
+        $shop_detail_edit = $request->all();
+        Shop::find($request->shop_id)->update($shop_detail_edit);
+        return redirect('/');
+    }
+
+    // 店舗情報削除機能
+    public function shop_detail_destroy(Request $request)
+    {
+        Shop::find($request->shop_id)->delete();
+        return redirect('/');
+    }
 }

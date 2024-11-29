@@ -33,7 +33,7 @@
                         </form>        
                     </td> 
                 </tr> 
-                <form action="/edit" method="post">
+                <form action="/book_edit" method="post">
                 @method('PATCH')
                 @csrf
                 <tr>

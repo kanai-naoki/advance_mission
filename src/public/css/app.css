@@ -62,7 +62,6 @@
 
 #menu-btn-check:checked~.menu-btn span {
     background-color: rgba(255, 255, 255, 0);
-    /*メニューオープン時は真ん中の線を透明にする*/
 }
 
 #menu-btn-check:checked~.menu-btn span::before {
