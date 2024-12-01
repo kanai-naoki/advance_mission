@@ -18,6 +18,7 @@
             <div class="shop_detail_header_right">
                 <form class="shop_reviewform" action="/review" method="get">
                 @csrf
+                    <input type="hidden" name="id" value="{{ $shop_status->id }}">
                     <button class="shop_review_button" type="submit">レビューを書く</button>
                 </form>
             </div>

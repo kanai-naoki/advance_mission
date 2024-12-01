@@ -18,10 +18,9 @@
                 <input type="checkbox" id="menu-btn-check">
                 <label for="menu-btn-check" class="menu-btn"><span></span></label>
                 <div class="menu-content">
-                @auth
                     <ul class="menu_area">
                         <li class="link_list">
-                            <form class="orner_home" action="/" method="get">
+                            <form class="orner_home" action="/orner" method="get">
                             @csrf
                                 <button class="orner_home_button" type="submit">Home</button>
                             </form>    
@@ -38,36 +37,19 @@
                                 <button class="logout_button" type="submit">Logout</button>
                             </form>
                         </li>            
-                    </ul>
-                @else
-                    <ul class="menu_area">
-                        <li class="link_list">
-                            <form class="menu_home" action="/" method="get">
-                            @csrf
-                                <button class="home_button" type="submit">Home</button>
-                            </form>
-                        </li>
-                        <li class="link_list">
-                            <form class="menu_home" action="/register" method="get">
-                            @csrf
-                                <button class="register_button" type="submit">Registration</button>
-                            </form>
-                        </li>
-                        <li class="link_list">
-                            <form class="menu_home" action="/login" method="get">
-                            @csrf
-                                <button class="login_button" type="submit">Login</button>
-                            </form>
-                        </li>
-                    </ul>
-                @endauth
-                
+                    </ul>                
                 </div>
             </div>
             <div class="header_ttl_area">
                 <h2 class="header_ttl">Rese</h2>
             </div>
-            @yield('search')
-        </div>
-        
+        </div>       
     </header>
+    
+    <main class="main">
+    @yield('content')
+    </main>
+</body>
+
+</html>
+ 

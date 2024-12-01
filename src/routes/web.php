@@ -9,6 +9,7 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\OrnerController;
+use App\Http\Controllers\Shop_representativeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,8 +51,8 @@ Route::middleware('verified')->group(function () {
     Route::get('/my_page', [BookController::class, 'book_list']);
     Route::get('/review', [ReviewController::class, 'review_form']);
     Route::post('/review', [ReviewController::class, 'review_create']);
-    Route::patch('/review_edit', [ReviewController::class, 'review_update']);
-    Route::delete('/review_delete', [ReviewController::class, 'review_destory']);
+    // Route::patch('/review_edit', [ReviewController::class, 'review_update']);
+    Route::delete('/review_delete', [ReviewController::class, 'review_destroy']);
     Route::post('/favorite', [FavoriteController::class, 'favorite_create']);
     Route::delete('/favorite_delete', [FavoriteController::class, 'favorite_destory']);    
 });
@@ -59,6 +60,7 @@ Route::middleware('verified')->group(function () {
 // 管理者権限
 Route::get('/admin', [OrnerController::class, 'admin_home']);
 Route::post('/orner', [OrnerController::class, 'orner_create']);
+Route::get('/orner_edit', [OrnerController::class, 'orner_list']);
 Route::patch('/orner_edit', [OrnerController::class, 'orner_update']);
 Route::delete('/orner_delete', [OrnerController::class, 'orner_destory']);
 

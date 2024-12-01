@@ -1,0 +1,168 @@
+.admin_header_content_area {
+    margin: 0 auto;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.admin_header_content {
+    height: 100%;
+}
+
+.admin_content {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.orner_create_area {
+    width: 45%;
+    height: 100%;
+    padding: 0% 2%;
+}
+
+.orner_create_content {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0% 1%;
+}
+
+.orner_create_table {
+    width: 100%;
+    height: 40%;
+    padding: 2%;
+    margin: 2% 0;
+    background-color: rgb(12, 82, 235);
+    color: white;
+    font-size: 15px;
+    border-radius: 3px;
+    border-style: solid 1px;
+    box-shadow: 3px 3px 1px rgb(51, 48, 48);
+    text-align: left;
+}
+
+.orner_create_table_header {
+    padding-left: 4%;
+    width: 35%;
+    height: 20%;
+}
+
+.orner_create_table_content {
+    width: 100%;
+    height: 20%;
+    padding-right: 4%;
+}
+
+.orner_create_form_name,
+.orner_create_form_shop_name {
+    width: 100%;
+    outline: 0;
+}
+
+.orner_create_table_submit {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-right: 4%;
+    padding-bottom: 3%;
+}
+
+.orner_create_button {
+    color: white;
+    background-color: rgb(1, 5, 243);
+    border-radius: 3%;
+}
+
+.favorite_status {
+    width: 40%;
+    padding: 0% 3%;
+}
+
+.favorite_content {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.favorite_wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.favorite_list_card {
+    width: 47%;
+    height: 30%;
+    margin: 4% 1%;
+    background-color: white;
+    border-radius: 3%;
+    box-shadow: 3px 3px 1px rgb(189, 186, 186);
+}
+
+.favorite_list_content-img {
+    width: 100%;
+    height: 50%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.favorite_list_text-box {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    padding: 2.5% 5%;
+}
+
+.shop_name_area {
+    height: 30%;
+    align-items: center;
+}
+
+.shop_name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.shop_tag_area {
+    display: flex;
+    height: 30%;
+}
+
+.shop_area,
+.shop_genre {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.favorite_detail_area {
+    display: flex;
+    justify-content: space-between;
+    height: 30%;
+}
+
+.favorite_detail {
+    display: flex;
+    align-items: center;
+}
+
+.favorite_form {
+    display: flex;
+    align-items: center;
+}
+
+.shop_detail_button {
+    background-color: rgb(12, 82, 235);
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.favorite_button {
+    background-color: white;
+    border: none;
+}

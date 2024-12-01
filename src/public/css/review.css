@@ -1,0 +1,94 @@
+.review_content {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.review_area {
+    width: 50%;
+    margin: 4% 0%;
+}
+
+.review_header {
+    height: 10%;
+    margin: 1% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review_header_left {
+    display: flex;
+}
+
+.review_form {
+    display: flex;
+    align-items: center;
+}
+
+.reverse_button {
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 3px 3px 1px rgb(189, 186, 186);
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.shop_detail_name {
+    height: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.review_delete_button {
+    border-radius: 5%;
+    box-shadow: 3px 3px 1px rgb(160, 157, 155);
+    background-color: rgb(235, 121, 15);
+    border: none;
+    color: white;
+}
+
+.shop_detail_img {
+    height: 60%;
+    margin: 1% 0%;
+}
+
+.img {
+    width: 100%;
+}
+
+.review_create_input_evaluation{
+
+}
+
+.review_create_evaluation_txt {
+    text-align: center;
+}
+
+.review_form_evaluation {
+    width: 20%;
+}
+
+.review_create_input_comment{
+    margin-top: 2%;
+}
+
+.review_form_comment {
+    width: 90%;
+}
+
+.review_create_submit {
+    margin-top: 4%;
+}
+
+.review_create_button {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(1, 5, 243);
+    border-radius: 3%;
+}
+
+
