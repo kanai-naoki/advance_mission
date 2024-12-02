@@ -25,12 +25,6 @@
                                 <button class="orner_home_button" type="submit">Home</button>
                             </form>    
                         </li>
-                        <li class="link_list">
-                            <form class="book_lists" action="/books" method="get">
-                            @csrf
-                                <button class="book_lists_button" type="submit">BookLists</button>
-                            </form>
-                        </li>
                         <li class="link_list"> 
                             <form class="menu_logout" action="/logout" method="post">
                             @csrf
@@ -45,7 +39,7 @@
             </div>
         </div>       
     </header>
-    
+
     <main class="main">
     @yield('content')
     </main>

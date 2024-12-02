@@ -30,7 +30,7 @@
 
 .orner_create_table {
     width: 100%;
-    height: 40%;
+    height: 45%;
     padding: 2%;
     margin: 2% 0;
     background-color: rgb(12, 82, 235);
@@ -76,93 +76,70 @@
     border-radius: 3%;
 }
 
-.favorite_status {
-    width: 40%;
+.orner_lists {
+    width: 45%;
     padding: 0% 3%;
 }
 
-.favorite_content {
+.orner_lists_content {
     font-size: 20px;
     font-weight: bold;
 }
 
-.favorite_wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.favorite_list_card {
-    width: 47%;
-    height: 30%;
-    margin: 4% 1%;
-    background-color: white;
-    border-radius: 3%;
-    box-shadow: 3px 3px 1px rgb(189, 186, 186);
-}
-
-.favorite_list_content-img {
+.orner_lists_table {
     width: 100%;
-    height: 50%;
-}
-
-.img {
-    width: 100%;
-    height: 100%;
-}
-
-.favorite_list_text-box {
-    display: flex;
-    flex-direction: column;
-    height: 50%;
-    padding: 2.5% 5%;
-}
-
-.shop_name_area {
-    height: 30%;
-    align-items: center;
-}
-
-.shop_name {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.shop_tag_area {
-    display: flex;
-    height: 30%;
-}
-
-.shop_area,
-.shop_genre {
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.favorite_detail_area {
-    display: flex;
-    justify-content: space-between;
-    height: 30%;
-}
-
-.favorite_detail {
-    display: flex;
-    align-items: center;
-}
-
-.favorite_form {
-    display: flex;
-    align-items: center;
-}
-
-.shop_detail_button {
+    height: 15%;
+    padding: 2%;
+    margin: 2% 0;
     background-color: rgb(12, 82, 235);
     color: white;
     font-size: 15px;
-    border-radius: 5px;
+    border-radius: 3px;
+    border-style: solid 1px;
+    box-shadow: 3px 3px 1px rgb(51, 48, 48);
+    text-align: left;
 }
 
-.favorite_button {
-    background-color: white;
-    border: none;
+.orner_lists_table_order_name_header,
+.orner_lists_table_order_name_content {
+    padding-left: 4%;
+    width: 35%;
+    height: 15%;
 }
+
+.orner_lists_table_shop_name_header,
+.orner_lists_table_shop_name_content {
+    width: 100%;
+    height: 100%;
+    padding-right: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop_name_content_left {
+    width: 50%;
+}
+
+.shop_name_content_right {
+    display: flex;
+    justify-content: right;
+    width: 50%;
+}
+
+.orner_update_button {
+    color: white;
+    background-color: rgb(78, 224, 42);
+    border-radius: 3%;
+    margin-right: 1%;
+}
+
+.orner_delete_button {
+    color: white;
+    background-color: rgb(248, 22, 22);
+    border-radius: 3%;
+    margin-left: 1%;
+}
+
+
+

@@ -62,7 +62,7 @@ Route::get('/admin', [OrnerController::class, 'admin_home']);
 Route::post('/orner', [OrnerController::class, 'orner_create']);
 Route::get('/orner_edit', [OrnerController::class, 'orner_list']);
 Route::patch('/orner_edit', [OrnerController::class, 'orner_update']);
-Route::delete('/orner_delete', [OrnerController::class, 'orner_destory']);
+Route::delete('/orner_delete', [OrnerController::class, 'orner_destroy']);
 
 // 店舗代表者権限
 Route::get('/orner', [Shop_representativeController::class, 'orner_home']);

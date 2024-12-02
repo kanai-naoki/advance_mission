@@ -54,43 +54,40 @@
             </form>          
         </table>
     </div>
-    <div class="favorite_status">
-        <div class="favorite_content">
-            <h3>お気に入り店舗</h3>
+    <div class="orner_lists">
+        <div class="orner_lists_content">
+            <h3>店舗代表者一覧</h3>
         </div>
-        <div class="favorite_wrapper">       
-        @foreach ($favorites as $favorite)
-            <div class="favorite_list_card">
-                <div class="favorite_list_content-img">
-                <img class="img" src="{{ $favorite->shop_image }}" />
-            </div>
-            <div class="favorite_list_text-box">
-                <div class="shop_name_area">
-                    <h2 class="shop_name">{{ $favorite->shop_name }}</h2>
-                </div>
-                <div class="shop_tag_area">
-                    <p class="shop_area">#{{ $favorite->area }}</p>
-                    <p class="shop_genre">#{{ $favorite->genre }}</p>
-                </div>
-                <div class="favorite_detail_area">
-                    <form class="favorite_detail" action="/detail" method="get">
-                    @csrf
-                        <input type="hidden" name="id" value="{{ $favorite->shop_id }}">
-                        <button class="shop_detail_button">詳しく見る</button>
-                    </form>
-                    <form class="favorite_form" action="/favorite_delete" method="post">
-                    @csrf
-                    @method('DELETE')
-                        <input type="hidden" name="user_id" value="{{ $favorite->user_id }}">
-                        <input type="hidden" name="shop_id" value="{{ $favorite->shop_id }}">
-                        <button class="favorite_button" type="submit">       
-                            <span class="material-icons">favorite</span>
-                        </button>
-                    </form>
-                </div>
-            </div> 
-        </div>
-        @endforeach
+        <table class="orner_lists_table">    
+            <tr>
+                <th class="orner_lists_table_order_name_header"><p>orner_name</p></th>
+                <th class="orner_lists_table_shop_name_header"><p>shop_name</p></th>                    
+            </tr>
+            @foreach ($orners as $orner)
+            <tr>
+                <td class="orner_lists_table_order_name_content">
+                    <p>{{ $orner->name }}</p>
+                </td>
+                <td class="orner_lists_table_shop_name_content">
+                    <div class="shop_name_content_left">
+                    <p>{{ $orner->shop_name }}</p>
+                    </div>
+                    <div class="shop_name_content_right">
+                        <form class="orner_update_form" action="/orner_edit" method="get">
+                        @csrf
+                            <button class="orner_update_button">変更する</button>
+                        </form>
+                        <form class="orner_delete_form" action="/orner_delete" method="post">
+                        @method('DELETE')
+                        @csrf
+                            <input type="hidden" name="id" value="{{ $orner->id }}">
+                            <button class="orner_delete_button" type="submit">削除する</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            @endforeach              
+        </table>
     </div>          
 </div>
 @endsection

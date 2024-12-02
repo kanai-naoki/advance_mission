@@ -20,16 +20,10 @@
                 <div class="menu-content">
                     <ul class="menu_area">
                         <li class="link_list">
-                            <form class="admin_home" action="/orner" method="get">
+                            <form class="admin_home" action="/admin" method="get">
                             @csrf
-                                <button class="orner_home_button" type="submit">Home</button>
+                                <button class="admin_home_button" type="submit">Home</button>
                             </form>    
-                        </li>
-                        <li class="link_list">
-                            <form class="orner_lists" action="/books" method="get">
-                            @csrf
-                                <button class="book_lists_button" type="submit">OrnerLists</button>
-                            </form>
                         </li>
                         <li class="link_list"> 
                             <form class="menu_logout" action="/logout" method="post">
