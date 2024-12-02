@@ -96,12 +96,10 @@ html {
 .link_list {
     list-style: none;
     width: 100%;
-    height: 33%;
+    height: 50%;
 }
 
-
-.orner_home_button,
-.book_lists_button,
+.admin_home_button,
 .logout_button {
     display: block;
     width: 100%;

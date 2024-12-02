@@ -21,7 +21,7 @@ class OrnerController extends Controller
         $user = Auth::user();
         $orners = Orner::select('id', 'name', 'shop_name')
                     ->get();
-        
+    
         return view('admin', compact('user', 'orners'));
     }
 
@@ -34,18 +34,24 @@ class OrnerController extends Controller
     }
 
     // 店舗代表者更新ページ
-    public function orner_edit_home(OrnerRequest $request)
+    public function orner_edit_home(Request $request)
     {
         $user = Auth::user();
-        
-        return view('orner_edit', compact('user'));
+        $orner = Orner::select('id', 'name', 'shop_name')
+                    ->where('id', $request->id)
+                    ->first();
+
+        return view('orner_edit', compact('user', 'orner'));
     }
 
     // 店舗代表者編集機能
     public function orner_edit(OrnerRequest $request)
     {
-        $orner_detail_edit = $request->all();
-        Orner::find($orner_detail_edit->id)->update($orner_edit);
+        $orner_detail_edit = [
+            'name' => $request->name,
+            'shop_name'  => $request->shop_name,
+        ];
+        Orner::find($request->id)->update($orner_detail_edit);
         return redirect('admin');
     }
 

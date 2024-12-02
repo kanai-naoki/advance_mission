@@ -75,6 +75,7 @@
                     <div class="shop_name_content_right">
                         <form class="orner_update_form" action="/orner_edit" method="get">
                         @csrf
+                            <input type="hidden" name="id" value="{{ $orner->id }}">
                             <button class="orner_update_button">変更する</button>
                         </form>
                         <form class="orner_delete_form" action="/orner_delete" method="post">
