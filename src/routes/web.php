@@ -66,6 +66,8 @@ Route::delete('/orner_delete', [OrnerController::class, 'orner_destroy']);
 
 // 店舗代表者権限
 Route::get('/orner', [Shop_representativeController::class, 'orner_home']);
+Route::post('/newshop', [Shop_representativeController::class, 'shop_create']);
+Route::get('/orner_shop_detail_edit', [Shop_representativeController::class, 'shop_detail_edit_home']);
 Route::patch('/orner_shop_detail_edit', [Shop_representativeController::class, 'shop_detail_update']);
 Route::delete('/orner_shop_detail_delete', [Shop_representativeController::class, 'shop_detail_destroy']);
 Route::get('/books', [Shop_representativeController::class, 'book_list']);

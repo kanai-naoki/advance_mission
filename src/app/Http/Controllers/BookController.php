@@ -62,6 +62,6 @@ class BookController extends Controller
     public function book_destroy(Request $request)
     {
         Book::find($request->id)->delete();
-        return redirect('/my_page');
+        return redirect('my_page');
     }
 }

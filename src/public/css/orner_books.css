@@ -1,0 +1,90 @@
+.orner_books_header_content_area {
+    margin: 0 auto;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.orner_books_header_content {
+    height: 100%;
+}
+
+.orner_books_content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.orner_book_lists_area {
+    width: 90%;
+    height: 100%;
+    padding: 0% 2%;
+}
+
+.book_lists_table {
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    margin: 2% 0;
+    background-color: rgb(12, 82, 235);
+    color: white;
+    font-size: 15px;
+    border-radius: 3px;
+    border-style: solid 1px;
+    box-shadow: 3px 3px 1px rgb(51, 48, 48);
+    text-align: left;
+}
+
+.book_lists_table_ttl_first {
+    width: 16.6%;
+    height: 100%;
+    padding-left: 1%;
+}
+
+.book_lists_table_ttl {
+    width: 16.6%;
+    height: 100%;
+}
+
+.book_lists_table_txt_area {
+    border-top: solid 1px white;
+}
+
+.book_lists_table_user_name {
+    width: 1/6;
+    height: 100%;
+    padding-left: 1%;
+}
+
+.book_lists_table_shop_name,
+.book_lists_table_book_date,
+.book_lists_table_book_time,
+.book_lists_table_number {
+    width: 1/6;
+    height: 100%;
+}
+
+.book_lists_table_others {
+    width: 1/6;
+    height: 100%;
+    padding-right: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.book_lists_contact_button {
+    color: white;
+    background-color: rgb(35, 184, 230);
+    border-radius: 3%;
+    margin-right: 2%;
+}
+
+.book_lists_delete_button {
+    color: white;
+    background-color: rgb(248, 22, 22);
+    border-radius: 3%;
+    margin-left: 2%;
+}
+
+
