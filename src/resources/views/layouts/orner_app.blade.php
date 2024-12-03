@@ -26,6 +26,18 @@
                             </form>    
                         </li>
                         <li class="link_list"> 
+                            <form class="menu_logout" action="/orner_shop_detail_edit" method="get">
+                            @csrf
+                                <button class="shop_update_button" type="submit">ShopUpdate</button>
+                            </form>
+                        </li>
+                        <li class="link_list"> 
+                            <form class="menu_logout" action="/books" method="get">
+                            @csrf
+                                <button class="book_lists_button" type="submit">BookLists</button>
+                            </form>
+                        </li>
+                        <li class="link_list"> 
                             <form class="menu_logout" action="/logout" method="post">
                             @csrf
                                 <button class="logout_button" type="submit">Logout</button>
