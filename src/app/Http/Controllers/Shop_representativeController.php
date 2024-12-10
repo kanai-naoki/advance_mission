@@ -39,13 +39,14 @@ class Shop_representativeController extends Controller
     // 店舗情報更新ページ
     public function shop_detail_edit_home(Request $request)
     {
+        $user = Auth::user();
         $shop_status = Shop::select('shops.id', 'areas.area', 'genres.genre', 'shop_name', 'shop_detail', 'shop_image')
             ->join('areas', 'shops.area_id', '=', 'areas.id')
             ->join('genres', 'shops.genre_id', '=', 'genres.id')
-            ->where('shops.shop_name', $request->shop_name)
+            // ->where('shops.shop_name', $request->shop_name)
             ->first();
         // dd($shop_status);
-        return view('shop_detail', compact('shop_status'));
+        return view('orner_edit', compact('user', 'shop_status'));
     }
 
     // 店舗情報編集機能
