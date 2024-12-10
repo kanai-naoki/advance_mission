@@ -19,21 +19,18 @@ class Shop_representativeController extends Controller
     public function orner_home() 
     {
         $user = Auth::user();
-        $books = Book::select('books.id', 'shop_name', 'book_date', 'book_time', 'number')
-            ->join('shops', 'books.shop_id', '=', 'shops.id')
-            ->join('users', 'books.user_id', '=', 'users.id')
-            ->where('books.user_id', Auth::id())
-            ->get();
-
-        $shop_detail = Shop::select('user_id', 'shop_id', 'areas.area', 'genres.genre', 'shop_name', 'shop_image')
-            ->join('areas', 'shops.area_id', '=', 'areas.id')
-            ->join('genres', 'shops.genre_id', '=', 'genres.id')
-            ->join('favorites', 'shops.id', '=', 'favorites.shop_id')
-            ->where('favorites.user_id', Auth::id())
-            ->get();
         
-        return view('orner', compact('user', 'books', 'favorites'));
+        return view('orner', compact('user'));
 
+    }
+
+    // 店舗情報新規作成ページ
+    public function shop_create(Request $request)
+    {
+        $shop_detail = $request->all();
+        Shop::create($shop_detail);
+
+        return redirect('orner');
     }
 
     // 店舗情報更新ページ
